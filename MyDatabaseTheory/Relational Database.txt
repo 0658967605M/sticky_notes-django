@@ -1,0 +1,23 @@
+Relational Database
+
+1. What is normalisation?
+
+-Normalisation is a process of restructuring database tables to minimise redundancies 
+and reduce data anomalies, ultimately bringing the database to a consistent state. 
+
+
+2. When is a table in 1NF?
+
+- when all of the key attributes are defined, there are no repeating groups
+ in the table, and all attributes are dependent on the primary key.
+
+  
+3. When is a table in 2NF?
+
+- when it is in 1NF and includes no partial dependencies,
+no attribute is dependent on only a portion of the primary key.  
+
+ 
+4. When is a table in 3NF?
+
+-when it is in 2NF, and it contains no transitive dependencies.

@@ -1,0 +1,105 @@
+Architecture.pdf
+
+
+1. Layered Architecture (a.k.a. N-Tier Architecture)
+>Real-world Example
+Banking system or Enterprise web applications (e.g., Java Spring Boot applications)
+
+*Description
+This architecture organizes the system into layers, each with a distinct responsibility — typically:
+-Presentation layer (UI)
+-Application/Service layer
+-Business/Domain layer
+-Data access layer
+
+>When to Use
+-When the application has clearly separable concerns.
+-When maintainability and testability are top priorities.
+-Ideal for enterprise applications that require strict structure and controlled dependencies.
+
+>Why Appropriate
+-Each layer can be modified independently (e.g., switch from SQL to NoSQL without changing business logic).
+-Promotes separation of concerns and code reusability.
+
+2. Repository Architecture
+>Real-world Example
+E-commerce platform using repositories for managing product, order, and user data.
+
+*Description
+-Repositories act as mediators between the domain and data mapping layers. They handle data retrieval, persistence, and querying, abstracting away the underlying database logic.
+
+>When to Use
+-When data sources or storage mechanisms may change (e.g., from MySQL to MongoDB).
+-When you want to isolate the data layer from business logic.
+
+>Why Appropriate
+-Centralizes data access logic.
+-Encourages decoupling and simplifies unit testing using mock repositories.
+
+3. Client–Server Architecture
+>Real-world Example
+Web applications like WhatsApp, Google Drive, or Email services.
+
+*Description
+The system is split into two main components:
+Client: the user interface or front-end.
+Server: provides services, processes requests, and manages data.
+
+>When to Use
+-When clients need to interact with a centralized service.
+-Suitable for networked systems and web or mobile apps.
+
+>Why Appropriate
+-Centralized data and logic make maintenance easier.
+-Scalable through adding more clients or servers (horizontal scaling).
+
+4. Pipe and Filter Architecture
+>Real-world Example
+Unix command-line pipelines (cat file.txt | grep "error" | sort | uniq)
+or data processing systems like ETL (Extract, Transform, Load) pipelines.
+
+*Description
+-Data flows through a sequence of processing components (filters), connected by pipes that transfer data between them.
+
+>When to Use
+-When tasks can be broken down into independent sequential stages.
+-For data transformation or stream processing applications.
+
+>Why Appropriate
+-Filters are reusable, and pipelining supports concurrent processing.
+-Easy to add or remove processing steps.
+
+>Combining Architecture Patterns
+combinations of these patterns used in real-world systems.
+
+Example 1: Layered Architecture + Repository Pattern
+Used in: Spring Boot applications or ASP.NET MVC enterprise apps.
+
+*Description
+The system has multiple layers (UI, Business, Data).
+The data access layer uses the Repository pattern to manage database operations.
+
+*Strengths
+-Clear separation of concerns.
+-Repository abstracts data access logic → easy to switch databases.
+-Easy to test and maintain.
+
+*Limitations
+-May introduce performance overhead with too many abstraction layers.
+-Over-engineering for small applications.
+
+Example 2: Client–Server Architecture + Layered Architecture
+Used in: Modern web apps (React frontend + Node.js/Spring backend)
+
+*Description
+The client is a front-end web application (presentation layer).
+The server implements layered architecture (controller, service, repository layers).
+
+*Strengths
+-Scalability — clients and servers can evolve independently.
+-Strong modularity and reusability.
+-Simplifies distributed system design.
+
+*Limitations
+-Network latency between client and server.
+-Complexity in handling versioning and API compatibility.

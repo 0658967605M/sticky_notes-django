@@ -1,0 +1,66 @@
+1. Explain the difference between data and information.
+
+-Data is a raw, unprocessed facts, figures, or symbols that doesn't have 
+ enough meaning behind.
+-Information is data that is processed and given context to
+ provide more meaning.
+
+ 
+2. What is metadata? 
+
+-A set of data that describes and gives information about other data
+ such as units of measurement, the time period the data represents,
+ or labels. 
+
+
+3. What is a DBMS, and what are its advantages? 
+
+-A database management system is a collection of programs
+ that works to manage the database structure and control access 
+ to the data stored in the database. 
+-Advantages of DBMS are: Better data access and security
+                         Improved data integration 
+                         Smooth data manipulation 
+                         High quality information
+
+
+4. Compare and contrast operational databases with analytical databases,
+   and provide an example of each.
+
+-Operational database are designed to store historical data and aggregated 
+ data. (e.g. older processing , financial transactions etc.)
+-Analytical database are designed for data analysis and business
+ intelligence. (e.g. data warehouse, online analytical cubes etc.)
+
+ 
+5. Explain the types of data and use cases where NoSQL databases are most 
+   effective.
+
+-Relational database are the most widely used database type. They structure
+ data into tables, composed of rows and columns, with related information
+ linked between them.
+-Non Relational database  offer more flexible approach to data storage
+ and management.
+
+
+6. Which DBMS does not require server configuration, and what are the 
+   advantages of using it?
+
+-SQLite is lightweight, it doesn't require sever configuration. 
+-Advantages of SQLite is that it offers reliability and speed, making
+ it a popular choice for applications that require a straightforward,
+ serverless database solution. 
+
+
+7. Explain ACID properties in the context of a DBMS.
+
+-Atomicity, Consistency, Isolation, and Durability that guarantee the 
+ reliability of database transactions, even in the event of system failures.
+*Atomicity ensures a transaction is an all-or-nothing operation. 
+*Consistency maintains the database's integrity by ensuring transactions move
+ from one valid state to another. 
+*Isolation ensures that concurrent transactions do not interfere with each other.
+*Durability guarantees that committed transactions are permanent and will not be lost. 
+
+
+ 
